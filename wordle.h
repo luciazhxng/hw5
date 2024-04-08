@@ -4,6 +4,7 @@
 #ifndef RECCHECK
 #include <set>
 #include <string>
+#include <map>
 #endif
 
 /**
@@ -22,4 +23,15 @@ std::set<std::string> wordle(
     const std::string& floating,
     const std::set<std::string>& dict);
 
+void wordleHelper(
+    const std::string& in,
+    std::map<char, int>& floating,
+    const std::set<std::string>& dict,
+    std::set<std::string>& words,
+    std::string& alphabet,
+    int index,
+    std::string curr,
+    int letters,
+    int num_floating
+);
 #endif

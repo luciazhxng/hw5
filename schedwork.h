@@ -38,4 +38,20 @@ bool schedule(
     DailySchedule& sched
 );
 
+bool scheduleHelper(
+  const AvailabilityMatrix& avail,
+  const size_t dailyNeed,
+  const size_t maxShifts,
+  DailySchedule& sched,
+  int day,
+  int worker_num
+);
+
+bool isValid(
+  DailySchedule& sched, 
+  size_t maxShifts,
+  int day, 
+  Worker_T worker
+);
+
 #endif
